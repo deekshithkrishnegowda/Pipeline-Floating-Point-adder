@@ -1,0 +1,66 @@
+[2019-03-07 14:58:49 EST] vcs -licqueue '-timescale=1ns/1ns' '+vcs+flush+all' '+warn=all' '-sverilog' design.sv testbench.sv  && ./simv +vcs+lic+wait  
+
+Warning-[LNX_OS_VERUN] Unsupported Linux version
+  Linux version 'CentOS Linux release 7.1.1503 (Core) ' is not supported on 
+  'x86_64' officially, assuming linux compatibility by default. Set 
+  VCS_ARCH_OVERRIDE to linux or suse32 to override.
+  Please refer to release notes for information on supported platforms.
+
+
+Warning-[LINX_KRNL] Unsupported Linux kernel
+  Linux kernel '3.13.0-71-generic' is not supported.
+  Supported versions are 2.4* or 2.6*.
+
+                         Chronologic VCS (TM)
+         Version J-2014.12-SP1-1 -- Thu Mar  7 19:58:50 2019
+               Copyright (c) 1991-2014 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file 'design.sv'
+
+Warning-[TMBIN] Too many bits in Based Number
+design.sv, 73
+  The specified width is '10' bits, actually got '12' bits.
+  The offending number is : '0000_0000_0000'.
+
+Parsing design file 'testbench.sv'
+Top Level Modules:
+       FP_adder_tb
+TimeScale is 1 ns / 1 ns
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+recompiling module FP_adder_tb
+Both modules done.
+rm -f _csrc*.so linux_scvhdl_*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -m elf_i386 -shared  -o .//../simv.daidir//_csrc0.so amcQwB.o 
+rm -f _csrc0.so
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv  -m32 -m32   -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir    _308_archive_1.so _csrc0.so  SIM_l.o  _csrc0.so     rmapats_mop.o rmapats.o rmar.o  rmar_llvm_0_1.o rmar_llvm_0_0.o          /apps/vcsmx/linux/lib/libzerosoft_rt_stubs.so /apps/vcsmx/linux/lib/libvirsim.so /apps/vcsmx/linux/lib/liberrorinf.so /apps/vcsmx/linux/lib/libsnpsmalloc.so    /apps/vcsmx/linux/lib/libvcsnew.so /apps/vcsmx/linux/lib/libuclinative.so   -Wl,-whole-archive /apps/vcsmx/linux/lib/libvcsucli.so -Wl,-no-whole-archive          /apps/vcsmx/linux/lib/vcs_save_restore_new.o /apps/vcsmx/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+CPU time: .116 seconds to compile + .215 seconds to elab + .192 seconds to link
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP1-1; Runtime version J-2014.12-SP1-1;  Mar  7 19:58 2019
+                   0sum=xxxxxxxxxxxxxxxx
+                  10sum=0101110000101100
+                  20sum=0100100100000000
+                  30sum=0101000001000000
+                  40sum=1101110101110100
+                  50sum=0000000000000000
+                  60sum=1101011101010000
+                  70sum=1100100100100000
+                  80sum=0101101010010000
+$finish called from file "testbench.sv", line 58.
+$finish at simulation time                  120
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 120 ns
+CPU Time:      0.240 seconds;       Data structure size:   0.0Mb
+Thu Mar  7 19:58:51 2019
+Finding VCD file...
+./FP_adder.vcd
+[2019-03-07 14:58:51 EST] Opening EPWave...
+Done
